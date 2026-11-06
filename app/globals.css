@@ -4,13 +4,13 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.99 0.002 100);
+  --background: oklch(0.99 0.006 145);
   --foreground: oklch(0.2 0.02 145);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.2 0.02 145);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2 0.02 145);
-  --primary: oklch(0.35 0.12 145);
+  --primary: #197144;
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.78 0.14 85);
   --secondary-foreground: oklch(0.2 0.02 145);
@@ -22,7 +22,7 @@
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.02 100);
   --input: oklch(0.92 0.02 100);
-  --ring: oklch(0.35 0.12 145);
+  --ring: var(--primary);
   --chart-1: oklch(0.35 0.12 145);
   --chart-2: oklch(0.78 0.14 85);
   --chart-3: oklch(0.45 0.08 145);

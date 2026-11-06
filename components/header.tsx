@@ -43,19 +43,21 @@ export function Header() {
 
       {/* Main navigation */}
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center">
+        <div className="flex min-h-28 items-center justify-between gap-6 py-3 sm:min-h-36">
+          <div className="flex shrink-0 items-center">
+            <Link href="/" aria-label="Everclean Multi-services — Home" className="inline-flex items-center rounded-2xl bg-white p-1.5 shadow-[0_6px_24px_-10px_rgba(25,113,68,0.28)] ring-1 ring-primary/15 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663217769121/OIOFeVOqWXMGcLdT.png"
                 alt="Everclean Multi-services"
-                className="h-14 w-auto"
+                width={1248}
+                height={1248}
+                className="h-24 w-24 object-contain sm:h-28 sm:w-28"
               />
             </Link>
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex md:items-center md:gap-x-6">
+          <div className="hidden lg:flex lg:items-center lg:gap-x-4 xl:gap-x-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -71,13 +73,15 @@ export function Header() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex md:hidden">
+          <div className="flex lg:hidden">
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">{mobileMenuOpen ? "Close main menu" : "Open main menu"}</span>
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" aria-hidden="true" />
               ) : (
@@ -89,7 +93,7 @@ export function Header() {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-border">
+          <div id="mobile-navigation" className="lg:hidden border-t border-border">
             <div className="space-y-1 py-4">
               {navigation.map((item) => (
                 <Link

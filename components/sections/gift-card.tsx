@@ -51,9 +51,9 @@ Thank you!`
   return (
     <section id="gift-card" className="py-16 sm:py-24 bg-secondary/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Info */}
-          <div>
+          <div className="min-w-0">
             <div className="inline-flex items-center gap-2 bg-secondary/50 text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Gift className="h-4 w-4" />
               <span>The Perfect Gift</span>
@@ -92,7 +92,7 @@ Thank you!`
           </div>
 
           {/* Right side - Amount selector */}
-          <div className="bg-card rounded-2xl p-8 shadow-lg">
+          <div className="min-w-0 bg-card rounded-2xl p-6 sm:p-8 shadow-lg">
             <h3 className="text-xl font-semibold text-foreground mb-6">
               Select Gift Card Amount
             </h3>
@@ -153,7 +153,7 @@ Thank you!`
             {/* CTA Button */}
             <Button 
               size="lg" 
-              className="w-full"
+              className="h-auto min-h-11 w-full whitespace-normal py-3"
               onClick={handleEmailClick}
             >
               <Gift className="h-5 w-5 mr-2" />

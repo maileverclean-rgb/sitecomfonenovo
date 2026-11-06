@@ -31,7 +31,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/10">
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary/12 via-background to-secondary/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
@@ -79,7 +79,7 @@ export function HeroSection() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               {heroImages.map((image, index) => (
                 <div
                   key={image.src}
@@ -91,7 +91,7 @@ export function HeroSection() {
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover"
+                    className={index === 2 ? "object-contain bg-white p-6" : "object-cover"}
                     priority={index === 0}
                   />
                 </div>

@@ -27,17 +27,19 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-[#155b3e] text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main footer content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
           {/* Company info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center mb-4">
+            <div className="inline-flex items-center rounded-2xl bg-white p-3 mb-5 shadow-lg shadow-black/10">
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663217769121/OIOFeVOqWXMGcLdT.png"
                 alt="Everclean Multi-services"
-                className="h-16 w-auto rounded-lg"
+                width={1248}
+                height={1248}
+                className="h-32 w-32 object-contain"
               />
             </div>
             <p className="text-sm opacity-80 mb-4">
@@ -46,15 +48,15 @@ export function Footer() {
             <div className="space-y-2 text-sm">
               <div className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-                <span>12804 Ledo Creek Terrace<br />Beltsville, MD 20705</span>
+                <span>11205 Shalom Ln<br />Hagerstown, MD 21742</span>
               </div>
-              <a href="tel:+12403752009" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <a href="tel:+12403752009" className="flex items-center gap-2 hover:text-secondary transition-colors">
                 <Phone className="h-4 w-4" />
                 <span>(240) 375-2009</span>
               </a>
-              <a href="mailto:contact@evercleanmultiservices.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <Mail className="h-4 w-4" />
-                <span>contact@evercleanmultiservices.com</span>
+              <a href="mailto:contact@evercleanmultiservices.com" className="flex items-center gap-2 hover:text-secondary transition-colors">
+                <Mail className="h-4 w-4 shrink-0" />
+                <span className="break-all">contact@evercleanmultiservices.com</span>
               </a>
             </div>
           </div>
@@ -65,7 +67,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link href={service.href} className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                  <Link href={service.href} className="opacity-80 hover:opacity-100 hover:text-secondary transition-colors">
                     {service.name}
                   </Link>
                 </li>
@@ -79,7 +81,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="opacity-80 hover:opacity-100 hover:text-primary transition-colors">
+                  <Link href={item.href} className="opacity-80 hover:opacity-100 hover:text-secondary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -113,7 +115,7 @@ export function Footer() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="opacity-70 hover:opacity-100 hover:text-primary transition-colors"
+                    className="opacity-70 hover:opacity-100 hover:text-secondary transition-colors"
                   >
                     {item.name}
                   </a>
@@ -121,7 +123,7 @@ export function Footer() {
                   <Link 
                     key={item.name} 
                     href={item.href} 
-                    className="opacity-70 hover:opacity-100 hover:text-primary transition-colors"
+                    className="opacity-70 hover:opacity-100 hover:text-secondary transition-colors"
                   >
                     {item.name}
                   </Link>
